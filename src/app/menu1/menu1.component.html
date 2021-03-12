@@ -1,0 +1,76 @@
+<app-header></app-header>
+<div class="container"> 
+    <div class="row">      
+      <!--NavBar-->
+      <app-navbar></app-navbar>
+      <!-- conteudo -->
+      <div class="conteudo col-md-12" style="min-height: 580px; padding-bottom: 60px">
+        
+        <section class="col-md-12 margin-top-section">
+          <h4>Menu1</h4>
+        </section>
+        <hr class="my-4  ">
+        <div class="container">
+          <div class="col-md-11 center-block pull-md-none margin-top-corpo">
+            <!-- Corpo -->
+            <!-- <p>{{message}}</p>--> 
+            <section><!--Pesquisar -->
+              <div class="col-md-12 center-block pull-md-none margin-top-corpo margin-bottom-corpo">            
+              <div class="form-row align-items-center">
+                <div class="col-auto">
+                  <label class="sr-only" for="matricula">matricula</label>
+                  <input type="text" class="form-control mb-2" 
+                  [(ngModel)]="matricula" [ngModelOptions]="{standalone: true}"
+                  name="matricula" placeholder="matrícula...">
+                </div>                                             
+                <div class="col-auto">
+                  <button (click)="buscarItem()" class="btn btn-primary mb-2">Pesquisar</button>
+                </div>
+              </div> 
+              </div>
+            </section>           
+            <br>
+            <section>
+              <div>
+  
+                <p-table #dt1 [value]="itens" dataKey="id"
+              [rows]="10" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]" [loading]="loading" styleClass="p-datatable-customers p-datatable-gridlines"
+              [paginator]="true">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th style="width: 35px;">#</th>
+                        <th>Matrícula</th>
+                        <th>Nome</th>
+                        <th>Sobre Nome</th>                        
+                        <th>Centro de Custo</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-item>
+                    <tr>
+                      <td>{{item.id}}</td>
+                      <td>{{item.matricula}}</td>
+                      <td>{{item.nome}}</td>
+                      <td>{{item.sobrenome}}</td>                      
+                      <td>{{item.centroCusto}}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+  
+              </div>
+            </section>
+
+
+            </div> 
+        </div>
+
+        
+         
+                 
+      </div>      
+  
+    <!-- Rodape -->
+    <app-footer></app-footer>
+  
+    </div>
+  </div>
+  <!-- /.container -->

@@ -1,0 +1,60 @@
+<app-header></app-header>
+<div class="container"> 
+    <div class="row">      
+      <!--NavBar-->
+      <app-navbar></app-navbar>
+      <!-- conteudo -->
+      <div class="conteudo col-md-12" style="min-height: 580px; padding-bottom: 60px">
+        
+        <section class="col-md-12 margin-top-section">
+          <h4>Menu2</h4>
+        </section>
+         
+        <hr class="my-4  ">
+
+        <div class="container">
+          <div class="col-md-11 center-block pull-md-none margin-top-corpo">
+            <!-- Corpo -->
+            <!-- <p>{{message}}</p>-->            
+            <br>
+            <section>
+              <form #formProtocolo="ngForm">        
+
+                <section><!--Form Protocolo-->          
+                  <div class="container"> 
+        
+                    <div class="row cold-md-12">             
+                      <div class="col-md-4">
+                        <label id="menu1-item1">Item 1</label><br>
+                        <input [disabled]="true" id="menu1-item1-i" class="form-control" type="text" 
+                        [(ngModel)]="item1" [ngModelOptions]="{standalone: true}" >
+                      </div>               
+                      
+                      <div class="col-md-4">
+                        <label id="menu1-item2">Item 2</label><br>
+                        <input [disabled]="true" id="menu1-item2-i" class="form-control" type="text" 
+                        [(ngModel)]="item2" [ngModelOptions]="{standalone: true}" >
+                      </div>
+                      <div class="col-md-4">
+                        <label id="menu1-item3">Item 3</label><br>
+                        <input [disabled]="true" id="menu1-item3-i" class="form-control" type="text" 
+                        [(ngModel)]="item3" [ngModelOptions]="{standalone: true}" >
+                      </div>              
+                    </div>                    
+        
+                    </div> 
+                </section>
+                </form> 
+            </section>
+          </div>    
+        </div>  
+
+                 
+      </div>      
+  
+    <!-- Rodape -->
+    <app-footer></app-footer>
+  
+    </div>
+  </div>
+  <!-- /.container -->
